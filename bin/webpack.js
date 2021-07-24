@@ -66,7 +66,7 @@ const runCli = cli => {
 	// eslint-disable-next-line node/no-missing-require
 	const pkg = require(pkgPath);
 	// eslint-disable-next-line node/no-missing-require
-	require(path.resolve(path.dirname(pkgPath), pkg.bin[cli.binName]));
+	require(path.resolve(path.dirname(pkgPath), pkg.bin[cli.binName])); // 加载webpack-cli中/bin/cli.js
 };
 
 /**
