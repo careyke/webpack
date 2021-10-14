@@ -5,6 +5,11 @@
  * @param {string[]} args command line arguments
  * @returns {Promise<void>} promise
  */
+
+/**
+ * webpack命令入口文件
+ */
+
 const runCommand = (command, args) => {
 	const cp = require("child_process");
 	return new Promise((resolve, reject) => {
@@ -66,6 +71,7 @@ const runCli = cli => {
 	// eslint-disable-next-line node/no-missing-require
 	const pkg = require(pkgPath);
 	// eslint-disable-next-line node/no-missing-require
+	// 执行webpack-cli包中的bin命令文件
 	require(path.resolve(path.dirname(pkgPath), pkg.bin[cli.binName]));
 };
 
